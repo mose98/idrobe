@@ -61,7 +61,21 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/fonts/
 
+  fonts:
+    - family: Bebas Neue
+      fonts:
+        - asset: assets/fonts/BebasNeue-Regular.ttf
+          weight: 500
+    - family: NewYorkExtraLarge-Regular
+      fonts:
+        - asset: assets/fonts/NewYorkExtraLarge-Regular.ttf
+          weight: 500
+    - family: NewYorkExtraLarge-Regular
+      fonts:
+        - asset: assets/fonts/SanFranciscoDisplay-Semibold.ttf
+          weight: 500
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

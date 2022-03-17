@@ -2,267 +2,297 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class home extends StatelessWidget {
-  home({
+class Home extends StatelessWidget {
+  Home({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
-        children: <Widget>[
-          Container(),
-          Transform.translate(
-            offset: Offset(20.0, 103.0),
-            child:
-                // Adobe XD layer: 'banner' (group)
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0xffffffff),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
                 SizedBox(
-              width: 347.0,
-              height: 141.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 25.0, 335.0, 116.0),
-                    size: Size(347.0, 141.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinBottom: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: 'Rectangle' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        color: const Color(0xffffffff),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0x1a000000),
-                            offset: Offset(2, 4),
-                            blurRadius: 16,
-                          ),
-                        ],
-                      ),
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    SvgPicture.string(
+                      _svg_sjym2f,
+                      allowDrawingOutsideViewBox: true,
                     ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Mistery box'.toUpperCase(),
+                      style: TextStyle(
+                        fontFamily: 'Bebas Neue',
+                        fontSize: 20,
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w700,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: 141.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Align(
+                        alignment: Alignment.center,
+                        child: Pinned.fromSize(
+                          bounds: Rect.fromLTWH(0.0, 25.0, 335.0, 116.0),
+                          size: Size(341.0, 141.0),
+                          pinLeft: true,
+                          pinRight: true,
+                          pinBottom: true,
+                          fixedHeight: true,
+                          child:
+                              // Adobe XD layer: 'Rectangle' (shape)
+                              Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4.0),
+                              color: const Color(0xffffffff),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: const Color(0x1a000000),
+                                  offset: Offset(2, 4),
+                                  blurRadius: 16,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(16.0, 60.0, 146.0, 64.0),
+                        size: Size(347.0, 141.0),
+                        fixedHeight: true,
+                        child:
+                            // Adobe XD layer: 'SUMMER SEA' (text)
+                            Text(
+                          'BENTORNATA\nCHAIMA',
+                          style: TextStyle(
+                            fontFamily: 'NewYorkExtraLarge-Regular',
+                            fontSize: 24,
+                            color: const Color(0xff272422),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(223.0, 0.0, 124.0, 141.0),
+                        size: Size(347.0, 141.0),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'TN6' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: const AssetImage(
+                                  'assets/images/home_woman.png'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(16.0, 60.0, 146.0, 64.0),
-                    size: Size(347.0, 141.0),
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: 'SUMMER SEA' (text)
-                        Text(
-                      'BENTORNATA\nCHAIMA',
+                ),
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Abbina i tuoi vestiti',
                       style: TextStyle(
                         fontFamily: 'NewYorkExtraLarge-Regular',
-                        fontSize: 24,
+                        fontSize: 18,
                         color: const Color(0xff272422),
                       ),
                       textAlign: TextAlign.left,
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(223.0, 0.0, 124.0, 141.0),
-                    size: Size(347.0, 141.0),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'TN6' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.fill,
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Color(0xffE6E6E6)),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(21),
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Cambia outfit',
+                              style: TextStyle(
+                                fontFamily: 'NewYorkExtraLarge-Regular',
+                                fontSize: 14,
+                                color: const Color(0xff575757),
+                                height: 1.9090909090909092,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            SizedBox(width: 5,),
+                            SvgPicture.string(
+                              _svg_m6675j,
+                              allowDrawingOutsideViewBox: true,
+                            ),
+                          ],
                         ),
                       ),
                     ),
+                  ],
+                ),
+                Transform.translate(
+                  offset: Offset(215.5, 306.0),
+                  child:
+                      // Adobe XD layer: 'tn1' (shape)
+                      Container(
+                    width: 124.0,
+                    height: 87.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: const AssetImage('assets/images/summer_coords.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(20.0, 262.0),
-            child:
-                // Adobe XD layer: 'Recently viewed' (text)
-                Text(
-              'Abbina i tuoi vestiti',
-              style: TextStyle(
-                fontFamily: 'SanFranciscoDisplay-Semibold',
-                fontSize: 18,
-                color: const Color(0xff272422),
-                height: 1.1666666666666667,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(20.0, 541.0),
-            child:
-                // Adobe XD layer: 'Saved items' (text)
-                Text(
-              'Vendi i vestiti nel tuo armadio',
-              style: TextStyle(
-                fontFamily: 'SanFranciscoDisplay-Semibold',
-                fontSize: 18,
-                color: const Color(0xff272422),
-                height: 1.1666666666666667,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(314.0, 545.0),
-            child:
-                // Adobe XD layer: 'View all' (text)
-                Text(
-              'Vedi tutti',
-              style: TextStyle(
-                fontFamily: 'SanFranciscoDisplay-Semibold',
-                fontSize: 12,
-                color: const Color(0xff8f5f43),
-                height: 1.5833333333333333,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Transform.translate(
-            offset: Offset(20.0, 580.0),
-            child:
-                // Adobe XD layer: 'IMGBIN_handbag-loui…' (shape)
-                Container(
-              width: 77.0,
-              height: 75.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage(''),
-                  fit: BoxFit.fill,
                 ),
-              ),
-            ),
-          ),
-          Container(),
-          Container(),
-          Container(),
-          Transform.translate(
-            offset: Offset(61.5, 306.0),
-            child:
-                // Adobe XD layer: 'Bitmap' (shape)
-                Container(
-              width: 102.0,
-              height: 110.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage(''),
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(215.5, 306.0),
-            child:
-                // Adobe XD layer: 'tn1' (shape)
-                Container(
-              width: 124.0,
-              height: 87.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage(''),
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(262.0, 265.0),
-            child: Container(
-              width: 94.0,
-              height: 22.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                color: const Color(0xffe6e6e6),
-                border: Border.all(width: 1.0, color: const Color(0xffe6e6e6)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
+                Transform.translate(
+                  offset: Offset(262.0, 265.0),
+                  child: Container(
+                    width: 94.0,
+                    height: 22.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5.0),
+                      color: const Color(0xffe6e6e6),
+                      border: Border.all(
+                          width: 1.0, color: const Color(0xffe6e6e6)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0x29000000),
+                          offset: Offset(0, 3),
+                          blurRadius: 6,
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(338.5, 269.5),
-            child: SvgPicture.string(
-              _svg_m6675j,
-              allowDrawingOutsideViewBox: true,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(268.0, 267.0),
-            child:
-                // Adobe XD layer: 'Recently viewed' (text)
-                Text(
-              'Cambia outfit',
-              style: TextStyle(
-                fontFamily: 'SanFranciscoDisplay-Semibold',
-                fontSize: 11,
-                color: const Color(0xff575757),
-                height: 1.9090909090909092,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Transform.translate(
-            offset: Offset(21.0, 700.0),
-            child:
-                // Adobe XD layer: '3894c04b39eacc9b7db…' (shape)
-                Container(
-              width: 82.0,
-              height: 100.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage(''),
-                  fit: BoxFit.fill,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x80000000),
-                    offset: Offset(0, 2),
-                    blurRadius: 4,
+                Transform.translate(
+                  offset: Offset(61.5, 306.0),
+                  child:
+                      // Adobe XD layer: 'Bitmap' (shape)
+                      Container(
+                    width: 102.0,
+                    height: 110.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: const AssetImage('assets/images/graphic_shirt.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
-                ],
-              ),
+                ),
+                Transform.translate(
+                  offset: Offset(20.0, 541.0),
+                  child:
+                      // Adobe XD layer: 'Saved items' (text)
+                      Text(
+                    'Vendi i vestiti nel tuo armadio',
+                    style: TextStyle(
+                      fontFamily: 'SanFranciscoDisplay-Semibold',
+                      fontSize: 18,
+                      color: const Color(0xff272422),
+                      height: 1.1666666666666667,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(314.0, 545.0),
+                  child:
+                      // Adobe XD layer: 'View all' (text)
+                      Text(
+                    'Vedi tutti',
+                    style: TextStyle(
+                      fontFamily: 'SanFranciscoDisplay-Semibold',
+                      fontSize: 12,
+                      color: const Color(0xff8f5f43),
+                      height: 1.5833333333333333,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Container(),
+                Transform.translate(
+                  offset: Offset(20.0, 580.0),
+                  child:
+                      // Adobe XD layer: 'IMGBIN_handbag-loui…' (shape)
+                      Container(
+                    width: 77.0,
+                    height: 75.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: const AssetImage('assets/images/handbag_lv.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(),
+                Container(),
+                Container(),
+
+
+                Container(),
+                Transform.translate(
+                  offset: Offset(21.0, 700.0),
+                  child:
+                      // Adobe XD layer: '3894c04b39eacc9b7db…' (shape)
+                      Container(
+                    width: 82.0,
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: const AssetImage(''),
+                        fit: BoxFit.fill,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0x80000000),
+                          offset: Offset(0, 2),
+                          blurRadius: 4,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(),
+              ],
             ),
           ),
-          Container(),
-          Transform.translate(
-            offset: Offset(28.0, 49.7),
-            child: SvgPicture.string(
-              _svg_sjym2f,
-              allowDrawingOutsideViewBox: true,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(56.0, 55.0),
-            child: Text(
-              'Mistery box',
-              style: TextStyle(
-                fontFamily: 'Bebas Neue',
-                fontSize: 15,
-                color: const Color(0xff000000),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
