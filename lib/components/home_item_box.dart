@@ -36,8 +36,9 @@ class HomeItemBox extends StatelessWidget {
           Align(
             alignment: Alignment.bottomLeft,
             child: Container(
-              width: 110,
-              height: 64,
+              padding: EdgeInsets.only(bottom: 30, left: 20),
+              width: 150,
+              height: 80,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -51,7 +52,7 @@ class HomeItemBox extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               Text(
                 subtitle,
@@ -69,12 +70,12 @@ class HomeItemBox extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: Container(
-              width: 82,
+              width: 100,
                 height: 100,
                 decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/' + img),
-              fit: BoxFit.fill,
+              fit: BoxFit.contain,
             ),
                 ),
               ),
