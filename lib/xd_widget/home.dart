@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:idrobe/components/home_item_box.dart';
 
 class Home extends StatelessWidget {
   Home({
@@ -115,7 +116,9 @@ class Home extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -131,7 +134,8 @@ class Home extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Color(0xffE6E6E6)),
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xffE6E6E6)),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -153,7 +157,9 @@ class Home extends StatelessWidget {
                               ),
                               textAlign: TextAlign.left,
                             ),
-                            SizedBox(width: 5,),
+                            SizedBox(
+                              width: 5,
+                            ),
                             SvgPicture.string(
                               _svg_m6675j,
                               allowDrawingOutsideViewBox: true,
@@ -164,6 +170,35 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
+                Container(
+                  height: 200,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      HomeItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
+                      HomeItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
+                      HomeItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
+                      HomeItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
+                      HomeItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(61.5, 306.0),
+                  child:
+                      // Adobe XD layer: 'Bitmap' (shape)
+                      Container(
+                    width: 102.0,
+                    height: 110.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image:
+                            const AssetImage('assets/images/graphic_shirt.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
                 Transform.translate(
                   offset: Offset(215.5, 306.0),
                   child:
@@ -173,7 +208,8 @@ class Home extends StatelessWidget {
                     height: 87.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage('assets/images/summer_coords.png'),
+                        image:
+                            const AssetImage('assets/images/summer_coords.png'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -196,21 +232,6 @@ class Home extends StatelessWidget {
                           blurRadius: 6,
                         ),
                       ],
-                    ),
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(61.5, 306.0),
-                  child:
-                      // Adobe XD layer: 'Bitmap' (shape)
-                      Container(
-                    width: 102.0,
-                    height: 110.0,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: const AssetImage('assets/images/graphic_shirt.png'),
-                        fit: BoxFit.fill,
-                      ),
                     ),
                   ),
                 ),
@@ -263,8 +284,6 @@ class Home extends StatelessWidget {
                 Container(),
                 Container(),
                 Container(),
-
-
                 Container(),
                 Transform.translate(
                   offset: Offset(21.0, 700.0),
