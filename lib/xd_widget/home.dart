@@ -10,11 +10,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: const Color(0xffffffff),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        physics: ScrollPhysics(),
+        child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
@@ -45,7 +45,7 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 40,
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
@@ -65,11 +65,12 @@ class Home extends StatelessWidget {
                               // Adobe XD layer: 'Rectangle' (shape)
                               Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4.0),
-                              color: const Color(0xffffffff),
+                              borderRadius: BorderRadius.circular(7.0),
+                              //color: Colors.blueGrey[600],
+                              color: Colors.white,
                               boxShadow: [
                                 BoxShadow(
-                                  color: const Color(0x1a000000),
+                                  color: Colors.grey,
                                   offset: Offset(2, 4),
                                   blurRadius: 16,
                                 ),
@@ -85,10 +86,10 @@ class Home extends StatelessWidget {
                         child:
                             // Adobe XD layer: 'SUMMER SEA' (text)
                             Text(
-                          'BENTORNATA\nCHAIMA',
+                          'BENTORNATO\nMOUSSA',
                           style: TextStyle(
                             fontFamily: 'NewYorkExtraLarge-Regular',
-                            fontSize: 24,
+                            fontSize: 20,
                             color: const Color(0xff272422),
                           ),
                           textAlign: TextAlign.left,
@@ -107,7 +108,7 @@ class Home extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: const AssetImage(
-                                  'assets/images/home_woman.png'),
+                                  'assets/images/home_woman.pn'),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -126,7 +127,7 @@ class Home extends StatelessWidget {
                       'Abbina i tuoi vestiti',
                       style: TextStyle(
                         fontFamily: 'NewYorkExtraLarge-Regular',
-                        fontSize: 18,
+                        fontSize: 17,
                         color: const Color(0xff272422),
                       ),
                       textAlign: TextAlign.left,
@@ -184,6 +185,31 @@ class Home extends StatelessWidget {
                     ],
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Vendi i vestiti nel tuo armadio',
+                      style: TextStyle(
+                        fontFamily: 'SanFranciscoDisplay-Semibold',
+                        fontSize: 17,
+                        color: const Color(0xff272422),
+                        height: 1.1666666666666667,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Text(
+                      'Vedi tutti',
+                      style: TextStyle(
+                        fontFamily: 'SanFranciscoDisplay-Semibold',
+                        fontSize: 12,
+                        color: const Color(0xff8f5f43),
+                        height: 1.5833333333333333,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ],
+                ),
                 Transform.translate(
                   offset: Offset(61.5, 306.0),
                   child:
@@ -236,36 +262,7 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
-                Transform.translate(
-                  offset: Offset(20.0, 541.0),
-                  child:
-                      // Adobe XD layer: 'Saved items' (text)
-                      Text(
-                    'Vendi i vestiti nel tuo armadio',
-                    style: TextStyle(
-                      fontFamily: 'SanFranciscoDisplay-Semibold',
-                      fontSize: 18,
-                      color: const Color(0xff272422),
-                      height: 1.1666666666666667,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(314.0, 545.0),
-                  child:
-                      // Adobe XD layer: 'View all' (text)
-                      Text(
-                    'Vedi tutti',
-                    style: TextStyle(
-                      fontFamily: 'SanFranciscoDisplay-Semibold',
-                      fontSize: 12,
-                      color: const Color(0xff8f5f43),
-                      height: 1.5833333333333333,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
+
                 Container(),
                 Transform.translate(
                   offset: Offset(20.0, 580.0),
