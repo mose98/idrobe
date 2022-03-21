@@ -1,5 +1,6 @@
+import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:idrobe/components/search_svg.dart';
 
 class Search extends StatelessWidget {
   Search({
@@ -7,40 +8,57 @@ class Search extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
-        children: <Widget>[
-          Container(),
-          Container(),
-          Container(),
-          Transform.translate(
-            offset: Offset(69.2, 507.0),
-            child:
-                // Adobe XD layer: 'You have not recent' (text)
-                SizedBox(
-              width: 238.0,
-              child: Text(
-                'Non ci sono ricerche recenti',
-                style: TextStyle(
-                  fontFamily: 'SanFranciscoDisplay-Medium',
-                  fontSize: 16,
-                  color: const Color(0xffadadad),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0xffffffff),
+        body: // Adobe XD layer: 'Illus / 1' (group)
+        Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width * 0.90,
+                child: TextField(
+                  cursorColor: Color(0xFF8F5F43),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(width: 0, color: Color(0xFFD6D6D6)),
+                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(width: 0, color: Color(0xFFD6D6D6)),
+                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(width: 0, color: Color(0xFFD6D6D6)),
+                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                    ),
+                      suffixIcon: Icon(Icons.shopping_bag, color: Colors.blueGrey),
+                      prefixIcon:Icon(Icons.search, color: Color(0xFF8F5F43)),
+                      filled: true,
+                    fillColor: Color(0xFFD6D6D6),
+
+                  ),
                 ),
-                textAlign: TextAlign.center,
               ),
-            ),
+              SizedBox(height: 200,),
+              SearchSvg(),
+              SizedBox(height: 10,),
+              SizedBox(
+                width: 238.0,
+                child: Text(
+                  'Non ci sono ricerche recenti',
+                  style: TextStyle(
+                    fontFamily: 'SanFranciscoDisplay-Medium',
+                    fontSize: 16,
+                    color: Color(0xffadadad),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
           ),
-          Transform.translate(
-            offset: Offset(63.0, 72.0),
-            child: SvgPicture.string(
-              _svg_vjg74p,
-              allowDrawingOutsideViewBox: true,
-            ),
-          ),
-          Container(),
-          Container(),
-        ],
+        ),
       ),
     );
   }

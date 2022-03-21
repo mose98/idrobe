@@ -12,16 +12,16 @@ class SquareItemBox extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(0),
       child: SizedBox(
-        width: 180,
-        height: 180.0,
+        width: 160,
+        height: 170.0,
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
             Align(
               alignment: Alignment.center,
               child: Container(
-                width: 160,
-                  height: 158,
+                width: 150,
+                  height: 148,
                   decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7.0),
               color: Colors.white,
@@ -38,9 +38,9 @@ class SquareItemBox extends StatelessWidget {
             Align(
               alignment: Alignment.bottomLeft,
               child: Container(
-                padding: EdgeInsets.only(bottom: 30, left: 20),
+                padding: EdgeInsets.only(bottom: 0, left: 20),
                 width: 150,
-                height: 80,
+                height: 60,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -54,7 +54,7 @@ class SquareItemBox extends StatelessWidget {
                   textAlign: TextAlign.left,
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 1,
                 ),
                 Text(
                   subtitle,

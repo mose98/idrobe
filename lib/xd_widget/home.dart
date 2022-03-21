@@ -104,7 +104,7 @@ class Home extends StatelessWidget {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: const AssetImage(
-                                      'assets/images/home_woman.png'),
+                                      'assets/images/home_woman.pn'),
                                   fit: BoxFit.fill,
                                 ),
                               ),
@@ -169,15 +169,16 @@ class Home extends StatelessWidget {
                     ),
                     Container(
                       height: 200,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
+                      child: Row(
+
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SquareItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
                           SquareItemBox(img: "summer_coords.png", title: "Graphic shirt", subtitle: "Next select"),
-                          SquareItemBox(img: "women_hoodie.png", title: "Graphic shirt", subtitle: "Next select"),
-                          SquareItemBox(img: "handbag_lv.png", title: "Graphic shirt", subtitle: "Next select"),
-                          SquareItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
-                          SquareItemBox(img: "handbag_lv.png", title: "Graphic shirt", subtitle: "Next select"),
+                          //SquareItemBox(img: "women_hoodie.png", title: "Graphic shirt", subtitle: "Next select"),
+                          //SquareItemBox(img: "handbag_lv.png", title: "Graphic shirt", subtitle: "Next select"),
+                          //SquareItemBox(img: "graphic_shirt.png", title: "Graphic shirt", subtitle: "Next select"),
+                          //SquareItemBox(img: "handbag_lv.png", title: "Graphic shirt", subtitle: "Next select"),
                         ],
                       ),
                     ),

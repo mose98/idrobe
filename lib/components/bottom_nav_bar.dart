@@ -33,9 +33,9 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: 20, top: 10),
       alignment: Alignment.center,
-      height: 60,
+      height: 80,
       child: Center(
         child: AnimatedBottomNavigationBar.builder(
             itemCount: widget.iconList!.length,
@@ -49,7 +49,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
             },
             gapWidth: 15,
             backgroundColor: Colors.white,
-            elevation: 2,
+            elevation: 0,
             activeIndex: _selectedIndex,
             onTap: (int tappedIndex) {
               setState(() {
