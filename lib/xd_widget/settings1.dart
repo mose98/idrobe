@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class settings1 extends StatelessWidget {
-  settings1({
+class Settings1 extends StatelessWidget {
+  Settings1({
     Key? key,
   }) : super(key: key);
   @override

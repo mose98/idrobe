@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class search extends StatelessWidget {
-  search({
+class Search extends StatelessWidget {
+  Search({
     Key? key,
   }) : super(key: key);
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:idrobe/utility.dart';
-import 'package:idrobe/xd_widget/home.dart';
+import 'package:idrobe/home_entry.dart';
 
 class Intro extends StatelessWidget {
   Intro({
@@ -15,7 +15,7 @@ class Intro extends StatelessWidget {
           () {
             Navigator.of(context).pushReplacement(
               createRoute(
-                (context, animation, secondaryAnimation) => Home(),
+                (context, animation, secondaryAnimation) => HomeEntry(),
               ),
             );
           },

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class scan_foto1 extends StatelessWidget {
-  scan_foto1({
+class ScanFoto1 extends StatelessWidget {
+  ScanFoto1({
     Key? key,
   }) : super(key: key);
   @override

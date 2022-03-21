@@ -1,11 +1,11 @@
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 
-class HomeItemBox extends StatelessWidget {
+class SquareItemBox extends StatelessWidget {
   final String img;
   final String title;
   final String subtitle;
-  const HomeItemBox({Key? key, required this.img, required this.title, required this.subtitle}) : super(key: key);
+  const SquareItemBox({Key? key, required this.img, required this.title, required this.subtitle}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

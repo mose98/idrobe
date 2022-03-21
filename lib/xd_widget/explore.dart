@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class explore extends StatelessWidget {
-  explore({
+class Explore extends StatelessWidget {
+  Explore({
     Key? key,
   }) : super(key: key);
   @override
