@@ -59,7 +59,7 @@ class _SearchState extends State<Search> {
                           isEmpty = 0;
                         });
                       } else if (SearchItemList.where(
-                                  (element) => element.text.startsWith(value))
+                                  (element) => element.text.toUpperCase().startsWith(value.toUpperCase()))
                               .toList()
                               .length ==
                           0) {
@@ -69,7 +69,7 @@ class _SearchState extends State<Search> {
                       } else {
                         searchDataList = createWidgetSearchList(
                             SearchItemList.where(
-                                    (element) => element.text.contains(value))
+                                    (element) => element.text.toUpperCase().contains(value.toUpperCase()))
                                 .toList());
                         setState(() {
                           isEmpty = 1;
