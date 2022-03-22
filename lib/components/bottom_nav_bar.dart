@@ -38,26 +38,27 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
       height: 80,
       child: Center(
         child: AnimatedBottomNavigationBar.builder(
-            itemCount: widget.iconList!.length,
-            tabBuilder: (int index, bool isActive) {
-              final color = isActive ? Color(0xFF8F5F43) : Colors.blueGrey;
-              return Icon(
-                widget.iconList![index],
-                size: 33,
-                color: color,
-              );
-            },
-            gapWidth: 15,
-            backgroundColor: Colors.white,
-            elevation: 0,
-            activeIndex: _selectedIndex,
-            onTap: (int tappedIndex) {
-              setState(() {
-                _selectedIndex = tappedIndex;
-              });
+          itemCount: widget.iconList!.length,
+          tabBuilder: (int index, bool isActive) {
+            final color = isActive ? Color(0xFF8F5F43) : Colors.blueGrey;
+            return Icon(
+              widget.iconList![index],
+              size: 33,
+              color: color,
+            );
+          },
+          gapWidth: 15,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          activeIndex: _selectedIndex,
+          onTap: (int tappedIndex) {
+            setState(() {
+              _selectedIndex = tappedIndex;
+            });
 
-              widget.onItemTap(_selectedIndex);
-            }),
+            widget.onItemTap(_selectedIndex);
+          },
+        ),
       ),
     );
     /*NavigationBar(
