@@ -4,6 +4,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:idrobe/xd_widget/explore.dart';
+import 'package:idrobe/xd_widget/home_special.dart';
 import 'package:idrobe/xd_widget/scan_foto1.dart';
 import 'package:idrobe/xd_widget/search.dart';
 import 'package:idrobe/xd_widget/settings1.dart';
