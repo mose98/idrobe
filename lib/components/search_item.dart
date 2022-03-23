@@ -25,11 +25,13 @@ class SearchItemWidget extends StatelessWidget {
           SizedBox(
             width: 10,
           ),
-          Text(
-            itemText,
-            style: TextStyle(
-              fontSize: 17,
-              color: Color(0xff585858)
+          Expanded(
+            child: Text(
+              itemText,
+              style: TextStyle(
+                fontSize: 17,
+                color: Color(0xff585858)
+              ),
             ),
           )
         ],

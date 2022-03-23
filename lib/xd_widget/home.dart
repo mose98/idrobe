@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-            physics: ScrollPhysics(),
+            physics: BouncingScrollPhysics(),
             child: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -68,7 +68,7 @@ class Home extends StatelessWidget {
                                     BoxShadow(
                                       color: Colors.grey,
                                       offset: Offset(2, 4),
-                                      blurRadius: 16,
+                                      blurRadius: 4,
                                     ),
                                   ],
                                 ),
@@ -104,7 +104,7 @@ class Home extends StatelessWidget {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: const AssetImage(
-                                      'assets/images/home_woman.pn'),
+                                      'assets/images/home_woman.png'),
                                   fit: BoxFit.fill,
                                 ),
                               ),
@@ -216,6 +216,7 @@ class Home extends StatelessWidget {
                     Container(
                       height: 500,
                       child: ListView(
+                        physics: BouncingScrollPhysics(),
                         scrollDirection: Axis.vertical,
                         children: [
                           RectItemBox(img: "handbag_lv.png", title: "Graphic shirt"),

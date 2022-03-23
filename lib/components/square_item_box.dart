@@ -12,16 +12,16 @@ class SquareItemBox extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(0),
       child: SizedBox(
-        width: 160,
-        height: 170.0,
+        width: MediaQuery.of(context).size.width * 0.45,
+        height: MediaQuery.of(context).size.width * 0.40,
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
             Align(
               alignment: Alignment.center,
               child: Container(
-                width: 150,
-                  height: 148,
+                width: MediaQuery.of(context).size.width * 0.41,
+                  height: MediaQuery.of(context).size.width * 0.35,
                   decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7.0),
               color: Colors.white,
@@ -29,7 +29,7 @@ class SquareItemBox extends StatelessWidget {
                 BoxShadow(
                   color: Colors.grey,
                   offset: Offset(2, 4),
-                  blurRadius: 16,
+                  blurRadius: 4,
                 ),
               ],
                   ),

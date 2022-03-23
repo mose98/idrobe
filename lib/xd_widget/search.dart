@@ -23,6 +23,8 @@ class _SearchState extends State<Search> {
     // TODO: implement initState
     super.initState();
     controller = new TextEditingController();
+    searchDataList = createWidgetSearchList(SearchItemList);
+    isEmpty = 1;
   }
 
   List<SearchItemWidget> createWidgetSearchList(List<SearchDataItem> list) {
@@ -55,8 +57,10 @@ class _SearchState extends State<Search> {
                     controller: controller,
                     onChanged: (value) {
                       if (value == null || value.length == 0) {
+                        searchDataList = createWidgetSearchList(SearchItemList);
+
                         setState(() {
-                          isEmpty = 0;
+                          isEmpty = 1;
                         });
                       } else if (SearchItemList.where(
                                   (element) => element.text.toUpperCase().startsWith(value.toUpperCase()))
@@ -132,12 +136,13 @@ class _SearchState extends State<Search> {
                     : isEmpty == 0
                         ? Container()
                         : Container(
-                            height: MediaQuery.of(context).size.height * 0.60,
+                            height: MediaQuery.of(context).size.height * 0.80,
                             child: ListView(
+                              physics: BouncingScrollPhysics(),
                               scrollDirection: Axis.vertical,
                               children: [
                                 SizedBox(
-                                  height: 50,
+                                  height: 30,
                                 ),
                                 ...searchDataList
                               ],

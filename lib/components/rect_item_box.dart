@@ -11,7 +11,7 @@ class RectItemBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 0),
+      padding: EdgeInsets.only(left: 00),
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: 100.0,
@@ -21,7 +21,7 @@ class RectItemBox extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.80,
+                width: MediaQuery.of(context).size.width * 0.87,
                 height: 83,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7.0),
@@ -30,7 +30,7 @@ class RectItemBox extends StatelessWidget {
                     BoxShadow(
                       color: Colors.grey,
                       offset: Offset(2, 4),
-                      blurRadius: 16,
+                      blurRadius: 4,
                     ),
                   ],
                 ),
@@ -54,7 +54,7 @@ class RectItemBox extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 40, bottom: 25),
+              padding: const EdgeInsets.only(right: 20, bottom: 25),
               child: Align(
                 alignment: Alignment.bottomRight,
                 child: Container(
@@ -76,10 +76,12 @@ class RectItemBox extends StatelessWidget {
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Container(
-                  width: 100,
+                  alignment: Alignment.topLeft,
+                  width: 200,
                   height: 100,
                   decoration: BoxDecoration(
                     image: DecorationImage(
+                      alignment: Alignment.topLeft,
                       image: AssetImage('assets/images/' + img),
                       fit: BoxFit.contain,
                     ),

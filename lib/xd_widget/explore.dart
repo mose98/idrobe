@@ -1,155 +1,127 @@
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
+import 'package:idrobe/components/explore_item.dart';
+import 'package:idrobe/components/explore_my_story.dart';
+import 'package:idrobe/components/explore_story_item.dart';
 
 class Explore extends StatelessWidget {
   Explore({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
-        children: <Widget>[
-          Transform.translate(
-            offset: Offset(25.0, 172.0),
-            child:
-                // Adobe XD layer: 'Content' (group)
-                SizedBox(
-              width: 326.0,
-              height: 769.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 40.0, 325.5, 729.0),
-                    size: Size(325.5, 769.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child:
-                        // Adobe XD layer: 'Explore Stories' (group)
-                        Stack(
-                      children: <Widget>[
-                        Container(),
-                        Container(),
-                        Container(),
-                        Container(),
-                        Container(),
-                        Container(),
-                      ],
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 66.0, 20.0),
-                    size: Size(325.5, 769.0),
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: 'Explore' (text)
-                        Text(
-                      'Esplora',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 18,
-                        color: const Color(0xff010101),
-                        fontWeight: FontWeight.w700,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
+        backgroundColor: const Color(0xffffffff),
+        body: // Adobe XD layer: 'Content' (group)
+            Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            // Adobe XD layer: 'Top' (group)
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.20,
+              child: ListView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Row(
+                    children: <Widget>[
+                      ExploreMyStory(),
+                      ExploreStoryItem(img: 'explore_brad.png', name: 'Brad'),
+                      ExploreStoryItem(img: 'explore_jack.png', name: 'Jack'),
+                      ExploreStoryItem(img: 'explore_brad.png', name: 'Brad'),
+                      ExploreStoryItem(img: 'explore_pete.png', name: 'Peter'),
+                      ExploreStoryItem(img: 'explore_bran.png', name: 'Bran'),
+                      ExploreStoryItem(img: 'explore_claire.png', name: 'Clare'),
+                      ExploreStoryItem(img: 'explore_andres.png', name: 'Andres'),
+                      ExploreStoryItem(img: 'explore_franck.png', name: 'Franck'),
+                      ExploreStoryItem(img: 'explore_jane.png', name: 'Jane'),
+                      ExploreStoryItem(img: 'explore_jessie.png', name: 'Jessie'),
+                      ExploreStoryItem(img: 'explore_john.png', name: 'John'),
+                      ExploreStoryItem(img: 'explore_me.png', name: 'Sara'),
+                      ExploreStoryItem(img: 'explore_brad.png', name: 'Brad'),
+                      ExploreStoryItem(img: 'explore_jack.png', name: 'Jack'),
+                      ExploreStoryItem(img: 'explore_brad.png', name: 'Brad'),
+                      ExploreStoryItem(img: 'explore_pete.png', name: 'Peter'),
+                      ExploreStoryItem(img: 'explore_bran.png', name: 'Bran'),
+                      ExploreStoryItem(img: 'explore_claire.png', name: 'Clare'),
+                      ExploreStoryItem(img: 'explore_andres.png', name: 'Andres'),
+                      ExploreStoryItem(img: 'explore_franck.png', name: 'Franck'),
+                      ExploreStoryItem(img: 'explore_jane.png', name: 'Jane'),
+                      ExploreStoryItem(img: 'explore_jessie.png', name: 'Jessie'),
+                      ExploreStoryItem(img: 'explore_john.png', name: 'John'),
+                      ExploreStoryItem(img: 'explore_me.png', name: 'Sara'),
+                      ExploreStoryItem(img: 'explore_brad.png', name: 'Brad'),
+                      ExploreStoryItem(img: 'explore_jack.png', name: 'Jack'),
+                      ExploreStoryItem(img: 'explore_brad.png', name: 'Brad'),
+                      ExploreStoryItem(img: 'explore_pete.png', name: 'Peter'),
+                      ExploreStoryItem(img: 'explore_bran.png', name: 'Bran'),
+                      ExploreStoryItem(img: 'explore_claire.png', name: 'Clare'),
+                      ExploreStoryItem(img: 'explore_andres.png', name: 'Andres'),
+                      ExploreStoryItem(img: 'explore_franck.png', name: 'Franck'),
+                      ExploreStoryItem(img: 'explore_jane.png', name: 'Jane'),
+                      ExploreStoryItem(img: 'explore_jessie.png', name: 'Jessie'),
+                      ExploreStoryItem(img: 'explore_john.png', name: 'John'),
+                      ExploreStoryItem(img: 'explore_me.png', name: 'Sara'),
+                    ],
                   ),
                 ],
               ),
             ),
-          ),
-          // Adobe XD layer: 'Top' (group)
-          SizedBox(
-            width: 400.0,
-            height: 163.0,
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromSize(
-                  bounds: Rect.fromLTWH(0.0, 0.0, 375.0, 163.0),
-                  size: Size(400.0, 163.0),
-                  pinLeft: true,
-                  pinRight: true,
-                  pinTop: true,
-                  pinBottom: true,
-                  child:
-                      // Adobe XD layer: 'Background' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 0.0, 375.0, 162.0),
-                        size: Size(375.0, 163.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child:
-                            // Adobe XD layer: 'Background Opacity' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromSize(
-                              bounds: Rect.fromLTWH(0.0, 0.0, 375.0, 162.0),
-                              size: Size(375.0, 162.0),
-                              pinLeft: true,
-                              pinRight: true,
-                              pinTop: true,
-                              pinBottom: true,
-                              child:
-                                  // Adobe XD layer: 'Background' (shape)
-                                  Container(
-                                decoration: BoxDecoration(
-                                  color: const Color(0xb2f3f4f9),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 162.0, 375.0, 1.0),
-                        size: Size(375.0, 163.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinBottom: true,
-                        fixedHeight: true,
-                        child:
-                            // Adobe XD layer: 'Line' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xfff3f4f9),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+            Container(
+              padding: EdgeInsets.only(left: 30),
+              width: MediaQuery.of(context).size.width,
+              child:
+                  // Adobe XD layer: 'Explore' (text)
+                  Text(
+                'Esplora',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 18,
+                  color: const Color(0xff010101),
+                  fontWeight: FontWeight.w700,
                 ),
-                Pinned.fromSize(
-                  bounds: Rect.fromLTWH(25.0, 64.0, 375.0, 72.0),
-                  size: Size(400.0, 163.0),
-                  pinLeft: true,
-                  pinRight: true,
-                  fixedHeight: true,
-                  child:
-                      // Adobe XD layer: 'Friends Stories' (group)
-                      Stack(
-                    children: <Widget>[
-                      Container(),
-                      Container(),
-                      Container(),
-                      Container(),
-                      Container(),
-                    ],
-                  ),
-                ),
-                Container(),
-              ],
+                textAlign: TextAlign.left,
+              ),
             ),
-          ),
-          Container(),
-        ],
-      ),
-    );
+            Container(
+              width: MediaQuery.of(context).size.width * 0.90,
+              height: MediaQuery.of(context).size.height * 0.70 - 16,
+              child: Expanded(
+                child: GridView(
+                  scrollDirection: Axis.vertical,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    childAspectRatio: 0.65,
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16,
+                  ),
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    ExploreItem(bgImg: 'explore_bg_jessie.png', name: 'Jessie K.', profImg: 'explore_jessie.png', views: '18.2k'),
+                    ExploreItem(bgImg: 'explore_bg_anna.png', name: 'Anna Pike', profImg: 'explore_anna.png', views: '6.8k'),
+                    ExploreItem(bgImg: 'explore_bg_bran.png', name: 'Claire K.', profImg: 'explore_bran.png', views: '7.4k'),
+                    ExploreItem(bgImg: 'explore_bg_claire.png', name: 'Bran S.', profImg: 'explore_claire.png', views: '11.9k'),
+                    ExploreItem(bgImg: 'explore_bg_mike.png', name: 'Mike Lyne', profImg: 'explore_mike.png', views: '22.3k'),
+                    ExploreItem(bgImg: 'explore_bg_jessie.png', name: 'Jessie K.', profImg: 'explore_jessie.png', views: '18.2k'),
+                    ExploreItem(bgImg: 'explore_bg_anna.png', name: 'Anna Pike', profImg: 'explore_anna.png', views: '6.8k'),
+                    ExploreItem(bgImg: 'explore_bg_bran.png', name: 'Claire K.', profImg: 'explore_bran.png', views: '7.4k'),
+                    ExploreItem(bgImg: 'explore_bg_claire.png', name: 'Bran S.', profImg: 'explore_claire.png', views: '11.9k'),
+                    ExploreItem(bgImg: 'explore_bg_mike.png', name: 'Mike Lyne', profImg: 'explore_mike.png', views: '22.3k'),
+                    ExploreItem(bgImg: 'explore_bg_jessie.png', name: 'Jessie K.', profImg: 'explore_jessie.png', views: '18.2k'),
+                    ExploreItem(bgImg: 'explore_bg_anna.png', name: 'Anna Pike', profImg: 'explore_anna.png', views: '6.8k'),
+                    ExploreItem(bgImg: 'explore_bg_bran.png', name: 'Claire K.', profImg: 'explore_bran.png', views: '7.4k'),
+                    ExploreItem(bgImg: 'explore_bg_claire.png', name: 'Bran S.', profImg: 'explore_claire.png', views: '11.9k'),
+                    ExploreItem(bgImg: 'explore_bg_mike.png', name: 'Mike Lyne', profImg: 'explore_mike.png', views: '22.3k'),
+                    ExploreItem(bgImg: 'explore_bg_bran.png', name: 'Claire K.', profImg: 'explore_bran.png', views: '7.4k'),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ));
   }
 }
