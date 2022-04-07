@@ -29,7 +29,7 @@ class _HomeEntryState extends State<HomeEntry> {
   }
 
   static List<Widget> pages = <Widget>[
-    Home(),
+    HomeSpecial(),
     Search(),
     ScanFoto1(),
     Explore(),
