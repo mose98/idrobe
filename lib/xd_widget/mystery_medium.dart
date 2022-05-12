@@ -1,426 +1,46 @@
-import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
 import 'dart:ui' as ui;
+
+import 'package:adobe_xd/pinned.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class mystery_medium extends StatelessWidget {
-  mystery_medium({
-    Key? key,
-  }) : super(key: key);
+class MysteryMedium extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
-        children: <Widget>[
-          Container(
-            width: 375.0,
-            height: 812.0,
-            decoration: BoxDecoration(
-              color: const Color(0xfff2f2f2),
-            ),
+    return Stack(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            color: Color(0xfff2f2f2),
           ),
-          Transform.translate(
-            offset: Offset(33.0, 229.0),
-            child:
-                // Adobe XD layer: 'Shoes' (group)
-                SizedBox(
-              width: 308.0,
-              height: 445.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 308.1, 445.0),
-                    size: Size(308.1, 445.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child:
-                        // Adobe XD layer: 'Shoes 02' (group)
-                        Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(1.0, 0.0, 307.0, 445.0),
-                          size: Size(308.1, 445.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(28.0),
-                              color: const Color(0xffffffff),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: const Color(0x29000000),
-                                  offset: Offset(0, 3),
-                                  blurRadius: 6,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(1.0, 0.0, 307.0, 292.0),
-                          size: Size(308.1, 445.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          fixedHeight: true,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(28.0),
-                                topRight: Radius.circular(28.0),
-                              ),
-                              color: const Color(0xffffa8b6),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(159.5, 46.8, 148.6, 203.2),
-                          size: Size(308.1, 445.0),
-                          pinRight: true,
-                          pinTop: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: SvgPicture.string(
-                            _svg_ssj51f,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(114.0, 303.0, 81.0, 40.0),
-                          size: Size(308.1, 445.0),
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: Text(
-                            'MEDIUM',
-                            style: TextStyle(
-                              fontFamily: 'Bebas Neue',
-                              fontSize: 33,
-                              color: const Color(0xff000000),
-                              fontWeight: FontWeight.w700,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(81.0, 125.0, 130.0, 130.0),
-                          size: Size(308.1, 445.0),
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: ClipOval(
-                            child: BackdropFilter(
-                              filter:
-                                  ui.ImageFilter.blur(sigmaX: 0.0, sigmaY: 0.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(
-                                      Radius.elliptical(9999.0, 9999.0)),
-                                  color: const Color(0x0023449b),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(244.0, 108.0, 54.0, 54.0),
-                          size: Size(308.1, 445.0),
-                          pinRight: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: ClipOval(
-                            child: BackdropFilter(
-                              filter:
-                                  ui.ImageFilter.blur(sigmaX: 0.0, sigmaY: 0.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(
-                                      Radius.elliptical(9999.0, 9999.0)),
-                                  color: const Color(0x0023449b),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 43.0, 155.0, 206.0),
-                          size: Size(308.1, 445.0),
-                          pinLeft: true,
-                          pinTop: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 155.0, 206.0),
-                                size: Size(155.0, 206.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                pinTop: true,
-                                pinBottom: true,
-                                child:
-                                    // Adobe XD layer: 'T-SHIRT_MYSTERY_BOX…' (shape)
-                                    Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: const AssetImage(''),
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(20.0, 23.0, 81.0, 43.0),
-                          size: Size(308.1, 445.0),
-                          pinLeft: true,
-                          pinTop: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: Text(
-                            '€ 89,99',
-                            style: TextStyle(
-                              fontFamily: 'Bebas Neue',
-                              fontSize: 35,
-                              color: const Color(0xffa4041e),
-                              fontWeight: FontWeight.w700,
-                              shadows: [
-                                Shadow(
-                                  color: const Color(0x29000000),
-                                  offset: Offset(0, 3),
-                                  blurRadius: 6,
-                                )
-                              ],
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(45.0, 349.0, 220.0, 21.0),
-                          size: Size(308.1, 445.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          fixedHeight: true,
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 36.0, 21.0),
-                                size: Size(220.0, 21.0),
-                                pinLeft: true,
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3.0),
-                                    border: Border.all(
-                                        width: 1.0,
-                                        color: const Color(0xff000000)),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(46.0, 0.0, 36.0, 21.0),
-                                size: Size(220.0, 21.0),
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3.0),
-                                    border: Border.all(
-                                        width: 1.0,
-                                        color: const Color(0xff000000)),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(92.0, 0.0, 36.0, 21.0),
-                                size: Size(220.0, 21.0),
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3.0),
-                                    color: const Color(0xffa4041e),
-                                    border: Border.all(
-                                        width: 1.0,
-                                        color: const Color(0xff000000)),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(138.0, 0.0, 36.0, 21.0),
-                                size: Size(220.0, 21.0),
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3.0),
-                                    border: Border.all(
-                                        width: 1.0,
-                                        color: const Color(0xff000000)),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(184.0, 0.0, 36.0, 21.0),
-                                size: Size(220.0, 21.0),
-                                pinRight: true,
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3.0),
-                                    border: Border.all(
-                                        width: 1.0,
-                                        color: const Color(0xff000000)),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(12.0, 0.0, 13.0, 19.0),
-                                size: Size(220.0, 21.0),
-                                pinLeft: true,
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Text(
-                                  'XS',
-                                  style: TextStyle(
-                                    fontFamily: 'Bebas Neue',
-                                    fontSize: 16,
-                                    color: const Color(0xff000000),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(61.0, 0.0, 6.0, 19.0),
-                                size: Size(220.0, 21.0),
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Text(
-                                  'S',
-                                  style: TextStyle(
-                                    fontFamily: 'Bebas Neue',
-                                    fontSize: 16,
-                                    color: const Color(0xff000000),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(106.0, 0.0, 8.0, 19.0),
-                                size: Size(220.0, 21.0),
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Text(
-                                  'M',
-                                  style: TextStyle(
-                                    fontFamily: 'Bebas Neue',
-                                    fontSize: 16,
-                                    color: const Color(0xffffffff),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(154.0, 0.0, 5.0, 19.0),
-                                size: Size(220.0, 21.0),
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Text(
-                                  'L',
-                                  style: TextStyle(
-                                    fontFamily: 'Bebas Neue',
-                                    fontSize: 16,
-                                    color: const Color(0xff000000),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(196.0, 0.0, 12.0, 19.0),
-                                size: Size(220.0, 21.0),
-                                pinRight: true,
-                                pinTop: true,
-                                pinBottom: true,
-                                fixedWidth: true,
-                                child: Text(
-                                  'XL',
-                                  style: TextStyle(
-                                    fontFamily: 'Bebas Neue',
-                                    fontSize: 16,
-                                    color: const Color(0xff000000),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(88.0, 397.0, 131.0, 29.0),
-                          size: Size(308.1, 445.0),
-                          pinBottom: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(3.0),
-                              color: const Color(0xffa4041e),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(104.0, 402.0, 101.0, 18.0),
-                          size: Size(308.1, 445.0),
-                          pinBottom: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: Text(
-                            'AGGIUNGI AL CARRELLO',
-                            style: TextStyle(
-                              fontFamily: 'Bebas Neue',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Mystery box',
+              style: TextStyle(
+                fontFamily: '.AppleSystemUIFont',
+                fontSize: 50,
+                color: Color(0xff5c5c5c),
+                fontWeight: FontWeight.w800,
               ),
+              textAlign: TextAlign.left,
             ),
-          ),
-          Container(),
-          Transform.translate(
-            offset: Offset(-1.6, 109.0),
-            child:
-                // Adobe XD layer: 'Forgot Password' (text)
-                SizedBox(
-              width: 379.0,
+            SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
               child: Text.rich(
                 TextSpan(
                   style: TextStyle(
                     fontFamily: 'Roboto',
                     fontSize: 20,
-                    color: const Color(0xff0f0a39),
+                    color: Color(0xff0f0a39),
                     height: 1,
                   ),
                   children: [
@@ -450,51 +70,480 @@ class mystery_medium extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-          ),
-          Transform.translate(
-            offset: Offset(124.0, 190.0),
-            child: Text(
+            SizedBox(
+              height: 55,
+            ),
+            Text(
               'Mistery box medium',
               style: TextStyle(
                 fontFamily: 'Bebas Neue',
                 fontSize: 20,
-                color: const Color(0xff000000),
+                color: Color(0xff000000),
               ),
               textAlign: TextAlign.left,
             ),
-          ),
-          Transform.translate(
-            offset: Offset(198.0, 307.0),
-            child: Text(
-              '1 Jeans\n2 Maglietta\n1 Scarpe\n1 felpa',
-              style: TextStyle(
-                fontFamily: 'Bebas Neue',
-                fontSize: 35,
-                color: const Color(0xffa4041e),
-                fontWeight: FontWeight.w700,
-                height: 1.1428571428571428,
-              ),
-              textAlign: TextAlign.left,
+            SizedBox(
+              height: 15,
             ),
-          ),
-          Transform.translate(
-            offset: Offset(40.0, 44.0),
-            child: Text(
-              'Mystery box',
-              style: TextStyle(
-                fontFamily: '.AppleSystemUIFont',
-                fontSize: 50,
-                color: const Color(0xff5c5c5c),
-                fontWeight: FontWeight.w800,
-              ),
-              textAlign: TextAlign.left,
+            Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                SizedBox(
+                  width: 307.0,
+                  height: 445.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.0, 307.1, 445.0),
+                        size: Size(307.1, 445.0),
+                        pinLeft: true,
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        child:
+                            // Adobe XD layer: 'Shoes 01' (group)
+                            Stack(
+                          children: <Widget>[
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 0.0, 307.0, 445.0),
+                              size: Size(307.1, 445.0),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              pinBottom: true,
+                              child: Transform.rotate(
+                                angle: 0.0,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(28.0),
+                                    color: Color(0xffffffff),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Color(0x29000000),
+                                        offset: Offset(0, 3),
+                                        blurRadius: 6,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 0.0, 307.0, 292.0),
+                              size: Size(307.1, 445.0),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              fixedHeight: true,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(28.0),
+                                    topRight: Radius.circular(28.0),
+                                  ),
+                                  color: Color(0xffFFA8B6),
+                                ),
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(158.5, 46.8, 148.6, 203.2),
+                              size: Size(307.1, 445.0),
+                              pinRight: true,
+                              pinTop: true,
+                              fixedWidth: true,
+                              fixedHeight: true,
+                              child: SvgPicture.string(
+                                _svg_4xwf3k,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(125.0, 303.0, 307.0, 40.0),
+                              size: Size(307.1, 445.0),
+                              fixedWidth: true,
+                              fixedHeight: true,
+                              child: Text(
+                                'Medium',
+                                style: TextStyle(
+                                  fontFamily: 'Bebas Neue',
+                                  fontSize: 33,
+                                  color: Color(0xff000000),
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(80.0, 125.0, 130.0, 130.0),
+                              size: Size(307.1, 445.0),
+                              fixedWidth: true,
+                              fixedHeight: true,
+                              child: ClipOval(
+                                child: BackdropFilter(
+                                  filter: ui.ImageFilter.blur(
+                                      sigmaX: 0.0, sigmaY: 0.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.elliptical(9999.0, 9999.0)),
+                                      color: Color(0x0023449b),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(243.0, 108.0, 54.0, 54.0),
+                              size: Size(307.1, 445.0),
+                              pinRight: true,
+                              fixedWidth: true,
+                              fixedHeight: true,
+                              child: ClipOval(
+                                child: BackdropFilter(
+                                  filter: ui.ImageFilter.blur(
+                                      sigmaX: 0.0, sigmaY: 0.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.elliptical(9999.0, 9999.0)),
+                                      color: Color(0x0023449b),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 0.0, 307.0, 292.0),
+                              size: Size(307.1, 445.0),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              fixedHeight: true,
+                              child: Stack(
+                                children: <Widget>[
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(-1.0, 43.0, 307.0, 230.0),
+                                    size: Size(307.0, 292.0),
+                                    pinLeft: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child:
+                                        // Adobe XD layer: 'T-SHIRT_MYSTERY_BOX…' (shape)
+                                        Container(
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/mystery_box.png'),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(0.0, 0.0, 307.0, 292.0),
+                                    size: Size(307.0, 292.0),
+                                    pinLeft: true,
+                                    pinRight: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(28.0),
+                                          topRight: Radius.circular(28.0),
+                                        ),
+                                        gradient: LinearGradient(
+                                          begin: Alignment(1.09, -1.3),
+                                          end: Alignment(-0.88, 1.73),
+                                          colors: [
+                                            Color(0x00027ffc),
+                                            Color(0x001e3b89)
+                                          ],
+                                          stops: [0.0, 1.0],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(44.0, 349.0, 220.0, 21.0),
+                              size: Size(307.1, 445.0),
+                              pinLeft: true,
+                              pinRight: true,
+                              fixedHeight: true,
+                              child: Stack(
+                                children: <Widget>[
+                                  Pinned.fromSize(
+                                    bounds: Rect.fromLTWH(0.0, 0.0, 36.0, 21.0),
+                                    size: Size(220.0, 21.0),
+                                    pinLeft: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(3.0),
+                                        border: Border.all(
+                                            width: 1.0,
+                                            color: Color(0xff000000)),
+                                      ),
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(46.0, 0.0, 36.0, 21.0),
+                                    size: Size(220.0, 21.0),
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(3.0),
+                                        border: Border.all(
+                                            width: 1.0,
+                                            color: Color(0xff000000)),
+                                      ),
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(92.0, 0.0, 36.0, 21.0),
+                                    size: Size(220.0, 21.0),
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(3.0),
+                                        color: Color(0xffffffff),
+                                        border: Border.all(
+                                            width: 1.0,
+                                            color: Color(0xff000000)),
+                                      ),
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(138.0, 0.0, 36.0, 21.0),
+                                    size: Size(220.0, 21.0),
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(3.0),
+                                        border: Border.all(
+                                            width: 1.0,
+                                            color: Color(0xff000000)),
+                                      ),
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(184.0, 0.0, 36.0, 21.0),
+                                    size: Size(220.0, 21.0),
+                                    pinRight: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(3.0),
+                                        border: Border.all(
+                                            width: 1.0,
+                                            color: Color(0xff000000)),
+                                      ),
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(12.0, 0.0, 13.0, 19.0),
+                                    size: Size(220.0, 21.0),
+                                    pinLeft: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Text(
+                                      'XS',
+                                      style: TextStyle(
+                                        fontFamily: 'Bebas Neue',
+                                        fontSize: 16,
+                                        color: Color(0xff000000),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds: Rect.fromLTWH(61.0, 0.0, 6.0, 19.0),
+                                    size: Size(220.0, 21.0),
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Text(
+                                      'S',
+                                      style: TextStyle(
+                                        fontFamily: 'Bebas Neue',
+                                        fontSize: 16,
+                                        color: Color(0xff000000),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(106.0, 0.0, 8.0, 19.0),
+                                    size: Size(220.0, 21.0),
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Text(
+                                      'M',
+                                      style: TextStyle(
+                                        fontFamily: 'Bebas Neue',
+                                        fontSize: 16,
+                                        color: Color(0xff000000),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(154.0, 0.0, 5.0, 19.0),
+                                    size: Size(220.0, 21.0),
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Text(
+                                      'L',
+                                      style: TextStyle(
+                                        fontFamily: 'Bebas Neue',
+                                        fontSize: 16,
+                                        color: Color(0xff000000),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ),
+                                  Pinned.fromSize(
+                                    bounds:
+                                        Rect.fromLTWH(196.0, 0.0, 12.0, 19.0),
+                                    size: Size(220.0, 21.0),
+                                    pinRight: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    fixedWidth: true,
+                                    child: Text(
+                                      'XL',
+                                      style: TextStyle(
+                                        fontFamily: 'Bebas Neue',
+                                        fontSize: 16,
+                                        color: Color(0xff000000),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(87.0, 397.0, 131.0, 29.0),
+                              size: Size(307.1, 445.0),
+                              pinBottom: true,
+                              fixedWidth: true,
+                              fixedHeight: true,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(3.0),
+                                  color: Color(0xffA4041E),
+                                ),
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(103.0, 402.0, 150.0, 18.0),
+                              size: Size(307.1, 445.0),
+                              pinBottom: true,
+                              fixedWidth: true,
+                              fixedHeight: true,
+                              child: Text(
+                                'AGGIUNGI AL CARRELLO',
+                                style: TextStyle(
+                                  fontFamily: 'Bebas Neue',
+                                  fontSize: 15,
+                                  color: Color(0xffffffff),
+                                ),
+                                textAlign: TextAlign.left,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 307,
+                  height: 445,
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(25),
+                        alignment: Alignment.centerLeft,
+                        width: 307,
+                        child: Text(
+                          '€ 89,99',
+                          style: TextStyle(
+                            fontFamily: 'Bebas Neue',
+                            fontSize: 35,
+                            color: Color(0xffA4041E),
+                            fontWeight: FontWeight.w700,
+                            shadows: [
+                              Shadow(
+                                color: Color(0x29000000),
+                                offset: Offset(0, 3),
+                                blurRadius: 6,
+                              )
+                            ],
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        alignment: Alignment.topRight,
+                        width: 307,
+                        child: Text(
+                          '1 Jeans\n2 Magliette\n1 Scarpe\n1 Felpa',
+                          style: TextStyle(
+                            fontFamily: 'Bebas Neue',
+                            fontSize: 35,
+                            color: Color(0xffA4041E),
+                            fontWeight: FontWeight.w700,
+                            height: 1.1428571428571428,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
+          ],
+        ),
+      ],
     );
   }
 }
 
-const String _svg_ssj51f =
-    '<svg viewBox="192.5 275.8 148.6 203.2" ><path transform="translate(0.06, 0.0)" d="M 341 275.7870788574219 L 192.4399566650391 275.7870788574219 L 192.4399566650391 478.9655151367188 L 341 478.9655151367188" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" /></svg>';
+const String _svg_4xwf3k =
+    '<svg viewBox="192.5 275.8 148.6 203.2" ><path transform="translate(0.06, 0.0)" d="M 341 275.7870788574219 L 192.4399566650391 275.7870788574219 L 192.4399566650391 478.9655151367188 L 341 478.9655151367188" fill="none" stroke="#ffe200" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" /></svg>';

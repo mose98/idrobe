@@ -2,26 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'dart:ui' as ui;
 
-class OffertaSerale extends StatelessWidget {
+class OffertaSerale extends StatefulWidget {
   OffertaSerale({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<OffertaSerale> createState() => _OffertaSeraleState();
+}
+
+class _OffertaSeraleState extends State<OffertaSerale> {
+  String timeRemaining = '23 ore 43 minuti 26  secondi';
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.blueGrey,
+          ),
+        ),
+        backgroundColor: Color(0xfff2f2f2),
+      ),
       backgroundColor: const Color(0xfff2f2f2),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            color: Colors.red,
+            width: double.infinity,
             child: Text(
               'Offerta serale',
               style: TextStyle(
                 fontFamily: '.AppleSystemUIFont',
-                fontSize: 50,
+                fontSize: 40,
                 color: const Color(0xff5c5c5c),
                 fontWeight: FontWeight.w200,
               ),
@@ -29,13 +49,12 @@ class OffertaSerale extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.blue,
-            width: 382.0,
+            width: double.infinity,
             child: Text.rich(
               TextSpan(
                 style: TextStyle(
                   fontFamily: 'Roboto',
-                  fontSize: 20,
+                  fontSize: 17,
                   color: const Color(0xff0f0a39),
                   height: 1,
                 ),
@@ -66,10 +85,42 @@ class OffertaSerale extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            width: double.infinity,
+            child: Text.rich(
+              TextSpan(
+                style: TextStyle(
+                  fontFamily: 'Al Bayan',
+                  fontSize: 13,
+                  color: const Color(0xff000000),
+                  height: 1.1538461538461537,
+                ),
+                children: [
+                  TextSpan(
+                    text: 'l’offerta termina tra ',
+                  ),
+                  TextSpan(
+                    text: timeRemaining,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
           Stack(
             alignment: Alignment.center,
             children: <Widget>[
-              SizedBox(
+              Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
                 width: MediaQuery.of(context).size.width * 0.75,
                 height: MediaQuery.of(context).size.height * 0.70,
                 child: Stack(
@@ -100,7 +151,7 @@ class OffertaSerale extends StatelessWidget {
                                 color: const Color(0xffffffff),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: const Color(0x29000000),
+                                    color: Color(0xE6F1C5C5),
                                     offset: Offset(0, 3),
                                     blurRadius: 6,
                                   ),
@@ -121,12 +172,12 @@ class OffertaSerale extends StatelessWidget {
                                   topLeft: Radius.circular(28.0),
                                   topRight: Radius.circular(28.0),
                                 ),
-                                color: const Color(0xffdddcda),
+                                color: const Color(0xFFF1C5C5),
                               ),
                             ),
                           ),
                           Pinned.fromSize(
-                            bounds: Rect.fromLTWH(19.0, 23.0, 95.0, 43.0),
+                            bounds: Rect.fromLTWH(19.0, 23.0, 200.0, 43.0),
                             size: Size(307.0, 548.0),
                             pinLeft: true,
                             pinTop: true,
@@ -326,7 +377,7 @@ class OffertaSerale extends StatelessWidget {
                             ),
                           ),
                           Pinned.fromSize(
-                            bounds: Rect.fromLTWH(103.0, 505.0, 101.0, 18.0),
+                            bounds: Rect.fromLTWH(87.0, 505.0, 131.0, 18.0),
                             size: Size(307.0, 548.0),
                             pinBottom: true,
                             fixedWidth: true,
@@ -335,10 +386,10 @@ class OffertaSerale extends StatelessWidget {
                               'AGGIUNGI AL CARRELLO',
                               style: TextStyle(
                                 fontFamily: 'Bebas Neue',
-                                fontSize: 15,
+                                fontSize: 13,
                                 color: const Color(0xffffffff),
                               ),
-                              textAlign: TextAlign.left,
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ],
@@ -348,10 +399,8 @@ class OffertaSerale extends StatelessWidget {
                 ),
               ),
               Transform.translate(
-                offset: Offset(101.0, 163.0),
-                child:
-                    // Adobe XD layer: 'WhatsApp_Image_2021…' (shape)
-                    Container(
+                offset: Offset(70.0, -70.0),
+                child: Container(
                   width: 268.0,
                   height: 447.0,
                   decoration: BoxDecoration(
@@ -359,46 +408,6 @@ class OffertaSerale extends StatelessWidget {
                       image: const AssetImage('assets/images/abito_offerta_speciale.png'),
                       fit: BoxFit.fill,
                     ),
-                  ),
-                ),
-              ),
-              Transform.translate(
-                offset: Offset(182.0, 595.0),
-                child: Container(
-                  width: 20.0,
-                  height: 13.0,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffdddcda),
-                  ),
-                ),
-              ),
-              Transform.translate(
-                offset: Offset(15.2, 146.0),
-                child:
-                    // Adobe XD layer: 'Recently viewed' (text)
-                    SizedBox(
-                  width: 346.0,
-                  child: Text.rich(
-                    TextSpan(
-                      style: TextStyle(
-                        fontFamily: 'Al Bayan',
-                        fontSize: 13,
-                        color: const Color(0xff000000),
-                        height: 1.1538461538461537,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: 'l’offerta termina tra ',
-                        ),
-                        TextSpan(
-                          text: '23 ore 43 minuti 26  secondi',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ],
-                    ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

@@ -1,16 +1,11 @@
-import 'dart:ffi';
-
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:idrobe/xd_widget/explore.dart';
 import 'package:idrobe/xd_widget/home_special.dart';
+import 'package:idrobe/xd_widget/mystery_pages.dart';
 import 'package:idrobe/xd_widget/scan_foto1.dart';
 import 'package:idrobe/xd_widget/search.dart';
-import 'package:idrobe/xd_widget/settings1.dart';
 
 import 'components/bottom_nav_bar.dart';
-import 'xd_widget/home.dart';
 
 class HomeEntry extends StatefulWidget {
   HomeEntry({Key? key}) : super(key: key);
@@ -33,7 +28,7 @@ class _HomeEntryState extends State<HomeEntry> {
     Search(),
     ScanFoto1(),
     Explore(),
-    Settings1(),
+    MysteryPages(),
   ];
 
   final iconList = <IconData>[
@@ -41,75 +36,75 @@ class _HomeEntryState extends State<HomeEntry> {
     Icons.search,
     Icons.camera_alt_rounded,
     Icons.public,
-    Icons.person,
+    Icons.card_giftcard_rounded,
   ];
 
   final destinationList = <NavigationDestination>[
-          NavigationDestination(
-            icon: Icon(
-              Icons.home_filled,
-              size: 28,
-              color: Colors.blueGrey,
-            ),
-            selectedIcon: Icon(
-              Icons.home_filled,
-              size: 28,
-              color: Color(0xFF8F5F43),
-            ),
-            label: "",
-          ),
-          NavigationDestination(
-            icon: Icon(
-              Icons.search,
-              size: 28,
-              color: Colors.blueGrey,
-            ),
-            selectedIcon: Icon(
-              Icons.search,
-              size: 28,
-              color: Color(0xFF8F5F43),
-            ),
-            label: "",
-          ),
-          NavigationDestination(
-            icon: Icon(
-              Icons.camera_alt_rounded,
-              size: 28,
-              color: Colors.blueGrey,
-            ),
-            selectedIcon: Icon(
-              Icons.camera_alt_rounded,
-              size: 28,
-              color: Color(0xFF8F5F43),
-            ),
-            label: "",
-          ),
-          NavigationDestination(
-            icon: Icon(
-              Icons.public,
-              size: 28,
-              color: Colors.blueGrey,
-            ),
-            selectedIcon: Icon(
-              Icons.public,
-              size: 28,
-              color: Color(0xFF8F5F43),
-            ),
-            label: "",
-          ),
-          NavigationDestination(
-            icon: Icon(
-              Icons.person,
-              size: 28,
-              color: Colors.blueGrey,
-            ),
-            selectedIcon: Icon(
-              Icons.person,
-              size: 28,
-              color: Color(0xFF8F5F43),
-            ),
-            label: "",
-          ),
+    NavigationDestination(
+      icon: Icon(
+        Icons.home_filled,
+        size: 28,
+        color: Colors.blueGrey,
+      ),
+      selectedIcon: Icon(
+        Icons.home_filled,
+        size: 28,
+        color: Color(0xFF8F5F43),
+      ),
+      label: "",
+    ),
+    NavigationDestination(
+      icon: Icon(
+        Icons.search,
+        size: 28,
+        color: Colors.blueGrey,
+      ),
+      selectedIcon: Icon(
+        Icons.search,
+        size: 28,
+        color: Color(0xFF8F5F43),
+      ),
+      label: "",
+    ),
+    NavigationDestination(
+      icon: Icon(
+        Icons.camera_alt_rounded,
+        size: 28,
+        color: Colors.blueGrey,
+      ),
+      selectedIcon: Icon(
+        Icons.camera_alt_rounded,
+        size: 28,
+        color: Color(0xFF8F5F43),
+      ),
+      label: "",
+    ),
+    NavigationDestination(
+      icon: Icon(
+        Icons.public,
+        size: 28,
+        color: Colors.blueGrey,
+      ),
+      selectedIcon: Icon(
+        Icons.public,
+        size: 28,
+        color: Color(0xFF8F5F43),
+      ),
+      label: "",
+    ),
+    NavigationDestination(
+      icon: Icon(
+        Icons.person,
+        size: 28,
+        color: Colors.blueGrey,
+      ),
+      selectedIcon: Icon(
+        Icons.person,
+        size: 28,
+        color: Color(0xFF8F5F43),
+      ),
+      label: "",
+    ),
   ];
 
   @override

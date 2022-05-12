@@ -49,7 +49,7 @@ class HomeSpecial extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).pushReplacement(
+                            Navigator.of(context).push(
                               createRoute(
                                 (context, animation, secondaryAnimation) => OffertaSerale(),
                               ),
