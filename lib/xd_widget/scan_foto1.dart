@@ -1,5 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:idrobe/utility.dart';
+import 'package:idrobe/xd_widget/scan_foto2.dart';
 
 class ScanFoto1 extends StatefulWidget {
   ScanFoto1({
@@ -25,8 +27,7 @@ class _ScanFoto1State extends State<ScanFoto1> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       final cameras = await availableCameras();
-      cameraController =
-          CameraController(cameras[0], ResolutionPreset.ultraHigh);
+      cameraController = CameraController(cameras[0], ResolutionPreset.ultraHigh);
       cameraController.initialize().then((value) => {
             setState(() {
               _isInited = true;
@@ -40,13 +41,12 @@ class _ScanFoto1State extends State<ScanFoto1> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
           children: [
             Container(
               color: Colors.white,
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).size.height,
               child: _isInited
                   ? CameraPreview(
                       cameraController,
@@ -54,12 +54,26 @@ class _ScanFoto1State extends State<ScanFoto1> {
                     )
                   : Container(),
             ),
-            CameraButton(
-              cameraController: cameraController,
-              function: (() async {
-                image = await cameraController.takePicture();
-                path = image.path;
-              }),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: CameraButton(
+                  cameraController: cameraController,
+                  function: (() async {
+                    image = await cameraController.takePicture();
+                    path = image.path;
+                    setState(() {
+                      _isInited = false;
+                    });
+                    Navigator.of(context).pushReplacement(
+                      createRoute(
+                        (context, animation, secondaryAnimation) => ScanFoto2(),
+                      ),
+                    );
+                  }),
+                ),
+              ),
             ),
           ],
         ),

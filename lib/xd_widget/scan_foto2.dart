@@ -1,33 +1,34 @@
-import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class scan_foto2 extends StatelessWidget {
-  scan_foto2({
-    Key? key,
-  }) : super(key: key);
+class ScanFoto2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
-          // Adobe XD layer: 'Rectangle' (shape)
-          Container(
-            width: 375.0,
-            height: 286.0,
-            color: const Color(0xffffffff),
+          Transform.translate(
+            offset: Offset(37.0, -3.0),
+            child:
+                // Adobe XD layer: 'Rectangle' (shape)
+                Container(
+              width: 375.0,
+              height: 286.0,
+              color: const Color(0xffffffff),
+            ),
           ),
           Transform.translate(
-            offset: Offset(0.0, 44.0),
+            offset: Offset(0.0, 30.1),
             child:
                 // Adobe XD layer: '15460' (shape)
                 Container(
-              width: 375.0,
-              height: 281.2,
+              width: 412.0,
+              height: 308.9,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/scan_foto.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -36,82 +37,7 @@ class scan_foto2 extends StatelessWidget {
           Container(),
           Container(),
           Transform.translate(
-            offset: Offset(20.0, 236.0),
-            child:
-                // Adobe XD layer: 'elip' (group)
-                SizedBox(
-              width: 28.0,
-              height: 4.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 4.0, 4.0),
-                    size: Size(28.0, 4.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Rectangle' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: const Color(0xff8f5f43),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(8.0, 0.0, 4.0, 4.0),
-                    size: Size(28.0, 4.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Rectangle' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: const Color(0xffadadad),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(16.0, 0.0, 4.0, 4.0),
-                    size: Size(28.0, 4.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Rectangle' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: const Color(0xffadadad),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(24.0, 0.0, 4.0, 4.0),
-                    size: Size(28.0, 4.0),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Rectangle' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: const Color(0xffadadad),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(311.0, 216.0),
+            offset: Offset(348.0, 213.0),
             child:
                 // Adobe XD layer: 'Rectangle' (shape)
                 Container(
@@ -131,7 +57,7 @@ class scan_foto2 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(323.1, 228.1),
+            offset: Offset(360.1, 225.1),
             child:
                 // Adobe XD layer: 'Icons / play-button' (group)
                 SizedBox(
@@ -187,7 +113,7 @@ class scan_foto2 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(331.0, 60.0),
+            offset: Offset(368.0, 57.0),
             child:
                 // Adobe XD layer: 'Icons / share' (group)
                 SizedBox(
@@ -660,7 +586,7 @@ class scan_foto2 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(311.0, 156.0),
+            offset: Offset(348.0, 153.0),
             child:
                 // Adobe XD layer: 'Group' (group)
                 SizedBox(
@@ -841,13 +767,12 @@ class scan_foto2 extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
-          Container(),
           Transform.translate(
             offset: Offset(0.0, 269.0),
             child:
                 // Adobe XD layer: 'Rectangle' (shape)
                 Container(
-              width: 375.0,
+              width: 412.0,
               height: 543.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4.0),
@@ -913,8 +838,7 @@ class scan_foto2 extends StatelessWidget {
               width: 40.0,
               height: 40.0,
               decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                 color: const Color(0xffef452c),
                 boxShadow: [
                   BoxShadow(
@@ -946,8 +870,7 @@ class scan_foto2 extends StatelessWidget {
                         // Adobe XD layer: 'Oval' (shape)
                         Container(
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                        borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                         color: const Color(0xffffffff),
                         boxShadow: [
                           BoxShadow(
@@ -999,8 +922,7 @@ class scan_foto2 extends StatelessWidget {
                         // Adobe XD layer: 'Oval' (shape)
                         Container(
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                        borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                         color: const Color(0xffffffff),
                         boxShadow: [
                           BoxShadow(
@@ -1040,8 +962,7 @@ class scan_foto2 extends StatelessWidget {
               width: 40.0,
               height: 40.0,
               decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                 color: const Color(0xff390b12),
                 boxShadow: [
                   BoxShadow(
@@ -1061,8 +982,7 @@ class scan_foto2 extends StatelessWidget {
               width: 40.0,
               height: 40.0,
               decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                 color: const Color(0xff9d9ea3),
               ),
             ),
@@ -1072,13 +992,13 @@ class scan_foto2 extends StatelessWidget {
             child:
                 // Adobe XD layer: 'Product cart' (group)
                 SizedBox(
-              width: 335.0,
+              width: 372.0,
               height: 116.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(20.0, 20.0, 315.0, 92.0),
-                    size: Size(335.0, 116.0),
+                    bounds: Rect.fromLTWH(20.0, 20.0, 352.0, 92.0),
+                    size: Size(372.0, 116.0),
                     pinLeft: true,
                     pinRight: true,
                     pinBottom: true,
@@ -1100,8 +1020,8 @@ class scan_foto2 extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(98.0, 34.0, 124.0, 21.0),
-                    size: Size(335.0, 116.0),
+                    bounds: Rect.fromLTWH(109.0, 34.0, 124.0, 21.0),
+                    size: Size(372.0, 116.0),
                     fixedHeight: true,
                     child:
                         // Adobe XD layer: 'Women's hoodie' (text)
@@ -1116,8 +1036,8 @@ class scan_foto2 extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(297.0, 62.0, 0.0, 54.0),
-                    size: Size(335.0, 116.0),
+                    bounds: Rect.fromLTWH(330.0, 62.0, 0.0, 54.0),
+                    size: Size(372.0, 116.0),
                     fixedHeight: true,
                     child:
                         // Adobe XD layer: '$123' (text)
@@ -1132,8 +1052,8 @@ class scan_foto2 extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(98.0, 68.0, 122.0, 19.0),
-                    size: Size(335.0, 116.0),
+                    bounds: Rect.fromLTWH(109.0, 68.0, 122.0, 19.0),
+                    size: Size(372.0, 116.0),
                     fixedHeight: true,
                     child:
                         // Adobe XD layer: 'Warehouse: 83' (text)
@@ -1150,7 +1070,7 @@ class scan_foto2 extends StatelessWidget {
                   ),
                   Pinned.fromSize(
                     bounds: Rect.fromLTWH(0.0, 0.0, 82.0, 100.0),
-                    size: Size(335.0, 116.0),
+                    size: Size(372.0, 116.0),
                     pinLeft: true,
                     pinTop: true,
                     pinBottom: true,
@@ -1160,7 +1080,7 @@ class scan_foto2 extends StatelessWidget {
                         Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/women_hoodie.png'),
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -1171,7 +1091,7 @@ class scan_foto2 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(331.0, 289.0),
+            offset: Offset(363.0, 297.0),
             child:
                 // Adobe XD layer: 'Icons / close' (group)
                 SizedBox(
@@ -1245,8 +1165,7 @@ class scan_foto2 extends StatelessWidget {
                         // Adobe XD layer: 'Oval' (shape)
                         Container(
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                        borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                         color: const Color(0xffffffff),
                         boxShadow: [
                           BoxShadow(
@@ -1298,8 +1217,7 @@ class scan_foto2 extends StatelessWidget {
                         // Adobe XD layer: 'Oval' (shape)
                         Container(
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                        borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                         color: const Color(0xffffffff),
                         boxShadow: [
                           BoxShadow(
@@ -1332,7 +1250,7 @@ class scan_foto2 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(260.0, 648.0),
+            offset: Offset(301.0, 647.0),
             child:
                 // Adobe XD layer: 'Amount' (group)
                 SizedBox(
@@ -1353,8 +1271,7 @@ class scan_foto2 extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4.0),
                         color: const Color(0xffffffff),
-                        border: Border.all(
-                            width: 1.0, color: const Color(0xffa3a3a3)),
+                        border: Border.all(width: 1.0, color: const Color(0xffa3a3a3)),
                       ),
                     ),
                   ),
@@ -1430,8 +1347,7 @@ class scan_foto2 extends StatelessWidget {
                         // Adobe XD layer: 'Oval' (shape)
                         Container(
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                        borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                         color: const Color(0xffffffff),
                         boxShadow: [
                           BoxShadow(
@@ -1463,7 +1379,6 @@ class scan_foto2 extends StatelessWidget {
               ),
             ),
           ),
-          Container(),
         ],
       ),
     );

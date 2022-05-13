@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'dart:ui' as ui;
+import 'package:flutter/material.dart';
 
 class OffertaSerale extends StatefulWidget {
   OffertaSerale({
@@ -13,6 +12,14 @@ class OffertaSerale extends StatefulWidget {
 
 class _OffertaSeraleState extends State<OffertaSerale> {
   String timeRemaining = '23 ore 43 minuti 26  secondi';
+  late DateTime target;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    target = DateTime.now().add(Duration(hours: 22, minutes: 37));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,30 +95,41 @@ class _OffertaSeraleState extends State<OffertaSerale> {
           SizedBox(
             height: 20,
           ),
-          Container(
-            width: double.infinity,
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Al Bayan',
-                  fontSize: 13,
-                  color: const Color(0xff000000),
-                  height: 1.1538461538461537,
-                ),
-                children: [
+          StreamBuilder(
+            stream: Stream.periodic(const Duration(seconds: 1)),
+            builder: (context, snapshot) {
+              Duration targetText = target.difference(DateTime.now());
+              return Container(
+                width: double.infinity,
+                child: Text.rich(
                   TextSpan(
-                    text: 'l’offerta termina tra ',
-                  ),
-                  TextSpan(
-                    text: timeRemaining,
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Al Bayan',
+                      fontSize: 13,
+                      color: const Color(0xff000000),
+                      height: 1.1538461538461537,
                     ),
+                    children: [
+                      TextSpan(
+                        text: 'l’offerta termina tra ',
+                      ),
+                      TextSpan(
+                        text: (targetText.inHours % 24).toString() +
+                            " ore " +
+                            (targetText.inMinutes % 60).toString() +
+                            " minuti " +
+                            (targetText.inSeconds % 60).toString() +
+                            " secondi",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              textAlign: TextAlign.center,
-            ),
+                  textAlign: TextAlign.center,
+                ),
+              );
+            },
           ),
           SizedBox(
             height: 10,
@@ -120,7 +138,8 @@ class _OffertaSeraleState extends State<OffertaSerale> {
             alignment: Alignment.center,
             children: <Widget>[
               Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
                 width: MediaQuery.of(context).size.width * 0.75,
                 height: MediaQuery.of(context).size.height * 0.70,
                 child: Stack(
@@ -220,7 +239,9 @@ class _OffertaSeraleState extends State<OffertaSerale> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3.0),
-                                      border: Border.all(width: 1.0, color: const Color(0xff000000)),
+                                      border: Border.all(
+                                          width: 1.0,
+                                          color: const Color(0xff000000)),
                                     ),
                                   ),
                                 ),
@@ -233,7 +254,9 @@ class _OffertaSeraleState extends State<OffertaSerale> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3.0),
-                                      border: Border.all(width: 1.0, color: const Color(0xff000000)),
+                                      border: Border.all(
+                                          width: 1.0,
+                                          color: const Color(0xff000000)),
                                     ),
                                   ),
                                 ),
@@ -247,7 +270,9 @@ class _OffertaSeraleState extends State<OffertaSerale> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3.0),
                                       color: const Color(0xff733042),
-                                      border: Border.all(width: 1.0, color: const Color(0xff000000)),
+                                      border: Border.all(
+                                          width: 1.0,
+                                          color: const Color(0xff000000)),
                                     ),
                                   ),
                                 ),
@@ -260,7 +285,9 @@ class _OffertaSeraleState extends State<OffertaSerale> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3.0),
-                                      border: Border.all(width: 1.0, color: const Color(0xff000000)),
+                                      border: Border.all(
+                                          width: 1.0,
+                                          color: const Color(0xff000000)),
                                     ),
                                   ),
                                 ),
@@ -274,7 +301,9 @@ class _OffertaSeraleState extends State<OffertaSerale> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3.0),
-                                      border: Border.all(width: 1.0, color: const Color(0xff000000)),
+                                      border: Border.all(
+                                          width: 1.0,
+                                          color: const Color(0xff000000)),
                                     ),
                                   ),
                                 ),
@@ -405,7 +434,8 @@ class _OffertaSeraleState extends State<OffertaSerale> {
                   height: 447.0,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: const AssetImage('assets/images/abito_offerta_speciale.png'),
+                      image: const AssetImage(
+                          'assets/images/abito_offerta_speciale.png'),
                       fit: BoxFit.fill,
                     ),
                   ),

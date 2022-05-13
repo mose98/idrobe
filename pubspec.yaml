@@ -38,6 +38,8 @@ dependencies:
   animated_bottom_navigation_bar: ^0.3.2
   font_awesome_flutter: ^10.1.0
   camera: ^0.9.4+24
+  intl: ^0.17.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
